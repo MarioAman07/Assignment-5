@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="top-banner">
+        <h1 class="main-heading">Aman Baku</h1>
+        <h2 class="sub-heading">SE-2422</h2>
+        <nav id="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+                <li class="nav-item"><a class="nav-link" href="#websites">Websites</a></li>
+                <li class="nav-item"><a class="nav-link" href="#photo">Photo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#schedule">Schedule</a></li>
+                <li class="nav-item"><a class="nav-link" href="#survey">Survey</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <h3 class="section-heading">About Me</h3>
+        <p class="paragraph-text">My name is Aman and I'm a student of AITU.</p>
+    </section>
+    <hr>
+
+    <!-- Hobbies -->
+    <section id="hobbies" class="content-section">
+        <h3 class="section-heading">My Hobbies</h3>
+        <ol class="list">
+            <li>Walking</li>
+            <li>Reading</li>
+            <li>Watching films</li>
+        </ol>
+    </section>
+    <hr>
+
+    <!-- Favorite Websites -->
+    <section id="websites" class="content-section">
+        <h3 class="section-heading">My Favorite Websites</h3>
+        <ul class="list">
+            <li><a href="https://www.google.com" target="_blank">Google</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+        </ul>
+    </section>
+    <hr>
+
+    <!-- Photo -->
+    <section id="photo" class="content-section">
+        <h3 class="section-heading">My Photo</h3>
+        <img src="images/MyPhoto.jpeg" alt="My Photo" id="main-image">
+        <p><button class="btn">Click Me!</button></p>
+    </section>
+    <hr>
+
+    <!-- Weekly Schedule -->
+    <section id="schedule" class="content-section">
+        <h3 class="section-heading">Weekly Schedule</h3>
+        <table class="schedule-table">
+            <tr>
+                <th>Subject</th>
+                <th>Day</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td>WEB Development (Front)</td>
+                <td>Monday</td>
+                <td>19:00-19:50</td>
+            </tr>
+            <tr>
+                <td>DAA</td>
+                <td>Tuesday</td>
+                <td>18:00-19:50</td>
+            </tr>
+            <tr>
+                <td>OS</td>
+                <td>Wednesday</td>
+                <td>19:00-19:50</td>
+            </tr>
+            <tr>
+                <td>Mathematics</td>
+                <td>Thursday</td>
+                <td>12:00</td>
+            </tr>
+            <tr>
+                <td>Russian</td>
+                <td>Friday</td>
+                <td>09:00</td>
+            </tr>
+        </table>
+    </section>
+    <hr>
+
+    <!-- Mood -->
+    <p class="paragraph-text">Today I feel happy 😃, a little tired 😴, but motivated 🚀!</p>
+
+    <!-- Survey Form -->
+    <section id="survey" class="content-section">
+        <h3 class="section-heading">Take the survey!</h3>
+        <form id="user-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-input" name="name"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-input" name="email"><br><br>
+
+            <label for="color">Favorite Color:</label>
+            <input type="color" id="color" class="form-input" name="color"><br><br>
+
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer-container">
+        <p>&copy; 2025 Aman Baku | Student of AITU</p>
+    </footer>
+</body>
+</html>
