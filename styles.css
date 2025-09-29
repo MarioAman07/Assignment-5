@@ -184,17 +184,6 @@ body {
     transform: scale(1.05);
 }
 
-/* === Portfolio Grid Layout === */
-.grid-layout {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        "sidebar main"
-        "footer footer";
-    grid-template-columns: 200px 1fr;
-    gap: 15px;
-    margin-top: 20px;
-}
 
 .grid-header { grid-area: header; background: #00897b; padding: 10px; text-align: center; }
 .grid-sidebar { grid-area: sidebar; background: #2e2e2e; padding: 10px; }
