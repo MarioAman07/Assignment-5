@@ -6,54 +6,17 @@ body {
     color: #e0e0e0;
 }
 
-/* === Header + Navbar (Flexbox) === */
-#top-banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(135deg, #00bfa6, #00897b);
-    color: #fff;
-    padding: 15px 25px;
-    border-bottom: 4px solid #ff6f00;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-#navbar .nav-list {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.nav-link:hover {
-    background: #ff6f00;
-    color: #121212;
-}
-
-/* === Sections === */
+/* === Section Container === */
 .content-section {
     background: #262626;
     margin: 20px auto;
     padding: 20px;
     border-radius: 12px;
-    max-width: 900px;
+    max-width: 1000px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
 
+/* === Section Headings === */
 .section-heading {
     color: #00e676;
     margin-bottom: 10px;
@@ -61,6 +24,7 @@ body {
     padding-left: 10px;
 }
 
+/* === Paragraphs === */
 .paragraph-text {
     color: #ccc;
 }
@@ -94,7 +58,7 @@ body {
     transform: scale(1.05);
 }
 
-/* === Tables === */
+/* === Table === */
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
@@ -146,13 +110,14 @@ body {
     display: flex;
     gap: 20px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
     background: #2e2e2e;
     padding: 15px;
     border-radius: 12px;
-    flex: 1;
+    flex: 1 1 250px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -167,40 +132,7 @@ body {
     box-shadow: 0 6px 15px rgba(0,0,0,0.6);
 }
 
-/* === Grid Gallery === */
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.gallery-grid img {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.gallery-grid img:hover {
-    transform: scale(1.05);
-}
-
-
-.grid-header { grid-area: header; background: #00897b; padding: 10px; text-align: center; }
-.grid-sidebar { grid-area: sidebar; background: #2e2e2e; padding: 10px; }
-.grid-main { grid-area: main; background: #333; padding: 10px; }
-.grid-footer { grid-area: footer; background: #00897b; padding: 10px; text-align: center; }
-
-/* === Footer === */
-#footer-container {
-    background: #121212;
-    color: #bdbdbd;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 30px;
-    border-top: 3px solid #00bfa6;
-}
-
-/* === Hobbies Cards (Flexbox like Projects) === */
+/* === Hobbies Cards === */
 .hobby-container {
     display: flex;
     gap: 20px;
@@ -226,7 +158,125 @@ body {
     margin-bottom: 10px;
 }
 
-.hobby-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+/* === Gallery Grid === */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* === Footer === */
+#footer-container {
+    background: #121212;
+    color: #bdbdbd;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-top: 3px solid #00bfa6;
+}
+
+/* === ✅ Responsive Typography === */
+@media (max-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+    .section-heading {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .section-heading {
+        font-size: 1.2rem;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* === 📱 Media Queries === */
+
+/* 🔹 Mobile (до 600px) */
+@media (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .section-heading {
+      font-size: 18px;
+    }
+  
+    #top-banner {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  
+    #navbar .nav-list {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .card-container {
+      flex-direction: column;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* 🔹 Tablet (601px - 900px) */
+  @media (min-width: 601px) and (max-width: 900px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .section-heading {
+      font-size: 22px;
+    }
+  
+    .card-container {
+      flex-wrap: wrap;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* 🔹 Desktop (от 901px и выше) */
+  @media (min-width: 901px) {
+    body {
+      font-size: 18px;
+    }
+  
+    .section-heading {
+      font-size: 26px;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
