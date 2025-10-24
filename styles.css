@@ -1,134 +1,81 @@
-/* === 🟢 MIDTERM IMPROVEMENTS (added at the end, nothing removed) === */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
 
-/* ✅ Bootstrap Carousel Customization */
-.carousel-inner img {
-    border-radius: 12px;
-    object-fit: cover;
-    max-height: 500px;
-  }
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: invert(1);
-  }
-  .carousel-indicators [data-bs-target] {
-    background-color: #00bfa6;
-  }
-  
-  /* ✅ Accessibility & Focus Styles */
-  a:focus,
-  button:focus,
-  input:focus,
-  select:focus,
-  textarea:focus {
-    outline: 2px solid #00e676;
-    outline-offset: 3px;
-    box-shadow: 0 0 5px #00e676;
-  }
-  
-  /* ✅ Section Spacing (Bootstrap alignment helpers) */
-  .content-section {
-    margin-top: 2rem !important;
-    margin-bottom: 2rem !important;
-    padding: 2rem !important;
-  }
-  
-  /* ✅ Navbar enhancements for mobile usability */
-  .navbar-nav .nav-link {
-    padding: 0.5rem 1rem;
-    font-weight: 500;
-  }
-  .navbar-nav .nav-link:hover {
-    color: #00e676 !important;
-  }
-  
-  /* ✅ Buttons: smooth transitions & consistent hover */
-  .btn {
-    transition: all 0.3s ease;
-  }
-  .btn-warning {
-    background-color: #ff6f00;
-    color: #fff;
-    border: none;
-  }
-  .btn-warning:hover {
-    background-color: #ff8f00;
-    transform: scale(1.05);
-  }
-  .btn-success {
-    background-color: #00bfa6;
-    border: none;
-    color: #121212;
-    font-weight: 600;
-  }
-  .btn-success:hover {
-    background-color: #1de9b6;
-    transform: scale(1.05);
-  }
-  
-  /* ✅ Cards + Hobbies unified shadows */
-  .card,
-  .hobby-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card:hover,
-  .hobby-card:hover {
-    transform: scale(1.04);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
-  }
-  
-  /* ✅ Improved form styling & validation */
-  form label {
-    font-weight: bold;
-    color: #00e676;
-  }
-  form input,
-  form select,
-  form textarea {
-    background-color: #121212;
-    color: #fff;
-    border: 1px solid #00bfa6;
-    border-radius: 6px;
-  }
-  form input:focus,
-  form select:focus,
-  form textarea:focus {
-    border-color: #00e676;
-  }
-  
-  /* ✅ Table readability improvement */
-  .schedule-table th,
-  .schedule-table td {
-    padding: 12px;
-  }
-  .schedule-table th {
-    background-color: #00e676;
-    color: #121212;
-    text-transform: uppercase;
-  }
-  
-  /* ✅ Responsive carousel & images */
-  @media (max-width: 768px) {
-    .carousel-inner img {
-      max-height: 300px;
-    }
-  }
-  
-  /* ✅ Footer enhancement */
-  #footer-container {
-    background: #121212;
-    color: #bdbdbd;
-    border-top: 3px solid #00bfa6;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.95rem;
-  }
-  
-  /* ✅ Subtle animation for hoverable sections */
-  .content-section:hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1.01);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* === ✅ END OF ADDITIONS === */
-  
+/* Navbar */
+.navbar {
+  background-color: #198754 !important;
+}
+.navbar a {
+  color: #fff !important;
+}
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Content sections */
+.content-section {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+}
+
+/* Headings */
+.section-heading {
+  font-weight: 700;
+  color: #198754;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+.card-title {
+  color: #198754;
+}
+
+/* Forms */
+form {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+.form-label {
+  color: #198754;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn-success {
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn-success:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Footer */
+footer {
+  background-color: #f1f3f4;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Carousel */
+.carousel img {
+  border-radius: 15px;
+  height: 400px;
+  object-fit: cover;
+}
