@@ -1,39 +1,30 @@
-// ===============================
-// Assignment #6 — JavaScript Basics
-// Student: Amanaman
-// Group: Write your group here
-// ===============================
-
-// -------------------------------
-// Part 1 — Introduction to JavaScript
-// -------------------------------
-
 // Task 0 — First Script
-console.log("Amanaman - Group XYZ");
+console.log("Aman - Group SE-2422");
 alert("Hello, JavaScript World!");
 
 // Task 1 — Variables & Operators
-let name = "Amanaman";
-let age = 20;
-let isStudent = true;
+let myName = "Aman";   
+let myAge = 18;          
+let isStudent = true;       
 
-console.log("Name:", name);
-console.log("Age:", age);
-console.log("Student:", isStudent);
 
-let a = 10, b = 5;
-console.log("Addition:", a + b);
-console.log("Subtraction:", a - b);
-console.log("Multiplication:", a * b);
-console.log("Division:", a / b);
+let x = 10;
+let y = 5;
 
-let message = "My name is " + name + " and I am " + age + " years old.";
+console.log("Addition:", x + y);        
+console.log("Subtraction:", x - y);     
+console.log("Multiplication:", x * y);  
+console.log("Division:", x / y);        
+console.log("Remainder:", x % y);      
+
+
+let message = "My name is " + myName + " and I am " + myAge + " years old.";
 console.log(message);
 
 
-// -------------------------------
-// Part 2 — DOM Manipulation
-// -------------------------------
+console.log(`Student: ${myName}, Age: ${myAge}, Is Student: ${isStudent}`);
+
+
 
 // Task 2 — Changing Content
 const changeTextBtn = document.getElementById("changeTextBtn");
@@ -68,7 +59,11 @@ const itemList = document.getElementById("itemList");
 if (addItemBtn && removeItemBtn && itemList) {
   addItemBtn.onclick = () => {
     const li = document.createElement("li");
-    li.textContent = "New List Item";
+    li.className = "list-group-item";
+    const span = document.createElement("span");
+    span.textContent = "New List Item";
+    li.appendChild(span);
+
     itemList.appendChild(li);
   };
 
@@ -80,9 +75,6 @@ if (addItemBtn && removeItemBtn && itemList) {
 }
 
 
-// -------------------------------
-// Part 3 — Events
-// -------------------------------
 
 // Task 5 — Mouse Events
 const colorBox = document.getElementById("colorBox");
@@ -126,47 +118,65 @@ if (form && errorMsg) {
 }
 
 
-// -------------------------------
-// Part 4 — Mini Project: To-Do List
-// -------------------------------
-const tasks = [];
+// Task 8
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskInput = document.getElementById("taskInput");
 const taskList = document.getElementById("taskList");
 
-if (addTaskBtn && taskInput && taskList) {
-  addTaskBtn.onclick = () => {
-    const taskText = taskInput.value.trim();
-    if (taskText === "") return;
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
+function saveTasks() {
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function renderTasks() {
+  taskList.innerHTML = "";
+  tasks.forEach((task, index) => {
     const li = document.createElement("li");
     li.className = "list-group-item d-flex justify-content-between align-items-center mt-2";
-    li.textContent = taskText;
+
+    if (task.completed) li.style.textDecoration = "line-through";
+    li.textContent = task.text;
 
     const btnGroup = document.createElement("div");
 
-    // Complete button
     const completeBtn = document.createElement("button");
     completeBtn.textContent = "Complete";
     completeBtn.className = "btn btn-sm btn-success me-2";
     completeBtn.onclick = () => {
-      li.style.textDecoration = "line-through";
+      tasks[index].completed = !tasks[index].completed;
+      saveTasks();
+      renderTasks();
     };
 
-    // Delete button
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.className = "btn btn-sm btn-danger";
-    deleteBtn.onclick = () => li.remove();
+    deleteBtn.onclick = () => {
+      tasks.splice(index, 1);
+      saveTasks();
+      renderTasks();
+    };
 
     btnGroup.appendChild(completeBtn);
     btnGroup.appendChild(deleteBtn);
     li.appendChild(btnGroup);
 
     taskList.appendChild(li);
-    tasks.push(taskText);
+  });
+}
+
+if (addTaskBtn && taskInput && taskList) {
+  addTaskBtn.onclick = () => {
+    const text = taskInput.value.trim();
+    if (text === "") return;
+    tasks.push({ text, completed: false });
     taskInput.value = "";
+    saveTasks();
+    renderTasks();
   };
 }
 
-console.log("✅ Script loaded successfully — all tasks ready!");
+renderTasks();
+
+console.log(" Script loaded successfully — all tasks ready!");
