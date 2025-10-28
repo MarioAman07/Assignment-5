@@ -26,6 +26,7 @@
           <li class="nav-item"><a class="nav-link" href="#projects">My Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link" href="#forms">Forms</a></li>
+          <li class="nav-item"><a class="nav-link" href="#assignment7">Forms</a></li>
         </ul>
       </div>
     </div>
@@ -309,9 +310,103 @@
       </div>
       <ul id="taskList" class="list-group"></ul>
     </div>
-  </section>
-  
-  
+
+    <section class="container my-5" id="assignment7">
+      <h2 class="text-center mb-4">🧠 Assignment #7 — jQuery Practice</h2>
+    
+      <!-- Task 0 -->
+      <div class="card mb-4 p-3">
+        <h5>Task 0: jQuery Setup</h5>
+        <p>Check the console for "jQuery is ready!"</p>
+      </div>
+    
+      <!-- Task 1 -->
+      <div class="card mb-4 p-3">
+        <h5>Task 1: Selectors & CSS</h5>
+        <p id="jq7-text">This text will be changed with jQuery.</p>
+        <button id="jq7-change-text" class="btn btn-primary">Change Text</button>
+      </div>
+    
+      <!-- Task 2 -->
+      <div class="card mb-4 p-3">
+        <h5>Task 2: Visibility Methods</h5>
+        <p id="jq7-paragraph">This paragraph can be shown or hidden.</p>
+        <button id="jq7-hide" class="btn btn-danger">Hide</button>
+        <button id="jq7-show" class="btn btn-success">Show</button>
+        <button id="jq7-toggle" class="btn btn-warning">Toggle</button>
+      </div>
+    
+      <!-- Task 3 -->
+      <div class="card mb-4 p-3 text-center">
+        <h5>Task 3: Fade Methods</h5>
+        <img id="jq7-fade-image" src="https://picsum.photos/200" class="rounded mb-2" alt="random image">
+        <div>
+          <button id="jq7-fadeout" class="btn btn-danger">Fade Out</button>
+          <button id="jq7-fadein" class="btn btn-success">Fade In</button>
+          <button id="jq7-fadetoggle" class="btn btn-warning">Fade Toggle</button>
+        </div>
+      </div>
+    
+      <!-- Task 4 -->
+      <div class="card mb-4 p-3">
+        <h5>Task 4: Slide Panel</h5>
+        <button id="jq7-slide-btn" class="btn btn-info mb-2">Toggle Panel</button>
+        <div id="jq7-panel" class="p-3 bg-light border rounded">
+          This panel slides up and down.
+        </div>
+      </div>
+    
+      <!-- Task 5 -->
+      <div class="card mb-4 p-3">
+        <h5>Task 5: Add & Remove Elements</h5>
+        <ul id="jq7-list">
+          <li>Item 1</li>
+        </ul>
+        <button id="jq7-add-item" class="btn btn-success">Add Item</button>
+        <button id="jq7-remove-item" class="btn btn-danger">Remove Item</button>
+      </div>
+    
+      <!-- Task 6 -->
+      <div class="card mb-4 p-3 text-center">
+        <h5>Task 6: Modifying Attributes</h5>
+        <img id="jq7-image" src="https://picsum.photos/150" class="rounded mb-2" alt="changeable">
+        <br>
+        <button id="jq7-change-src" class="btn btn-primary mb-2">Change Image</button><br>
+        <a id="jq7-link" href="https://google.com" target="_blank">Visit Google</a><br>
+        <button id="jq7-change-link" class="btn btn-secondary mt-2">Change Link</button>
+      </div>
+    
+      <!-- Task 7 -->
+      <div class="card mb-4 p-3">
+        <h5>Task 7: Form Interaction</h5>
+        <form id="jq7-form">
+          <input type="text" id="jq7-name" placeholder="Enter your name" class="form-control mb-2">
+          <input type="email" id="jq7-email" placeholder="Enter your email" class="form-control mb-2">
+        </form>
+        <p id="jq7-output" class="mt-2 text-muted"></p>
+      </div>
+    
+      <!-- Task 8–10 -->
+      <div class="card mb-4 p-3 text-center">
+        <h5>Tasks 8–10: Animations</h5>
+        <div id="jq7-box" style="width:100px;height:100px;background-color:skyblue;margin:auto;border-radius:15px;"></div>
+        <div class="mt-3">
+          <button id="jq7-animate" class="btn btn-primary">Animate</button>
+          <button id="jq7-sequence" class="btn btn-success">Sequential</button>
+          <button id="jq7-combo" class="btn btn-warning">Combined</button>
+        </div>
+      </div>
+    
+      <!-- Task 11 -->
+      <div class="card mb-4 p-3 text-center">
+        <h5>Task 11: Mini Project — Bouncing Ball</h5>
+        <div id="jq7-ball-area" style="position:relative;width:100%;height:250px;border:2px solid #ccc;overflow:hidden;border-radius:10px;">
+          <div id="jq7-ball" style="width:50px;height:50px;background-color:tomato;border-radius:50%;position:absolute;left:0;top:100px;"></div>
+        </div>
+        <button id="jq7-bounce" class="btn btn-danger mt-3">Start Bounce</button>
+      </div>
+    </section>
+      
 
   <!-- Footer -->
   <footer class="text-center py-3 mt-5 bg-light border-top">
@@ -347,6 +442,7 @@
       });
     })();
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,81 +1,73 @@
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f9;
+  color: #222;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #198754 !important;
-}
-.navbar a {
-  color: #fff !important;
-}
-.navbar a:hover {
-  text-decoration: underline;
-}
-
-/* Content sections */
-.content-section {
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  margin-top: 40px;
-}
-
-/* Headings */
-.section-heading {
-  font-weight: 700;
-  color: #198754;
+header, footer {
   text-align: center;
+  background: #0078ff;
+  color: white;
+  padding: 20px;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.task {
   margin-bottom: 30px;
 }
 
-/* Cards */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-.card-title {
-  color: #198754;
-}
-
-/* Forms */
-form {
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 30px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
-}
-.form-label {
-  color: #198754;
-  font-weight: 500;
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0078ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* Buttons */
-.btn-success {
-  border-radius: 8px;
-  font-weight: 600;
-}
-.btn-success:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+button:hover {
+  background-color: #005fcc;
 }
 
-/* Footer */
-footer {
-  background-color: #f1f3f4;
-  color: #555;
-  font-size: 0.9rem;
+/* Animation Box */
+#animate-box {
+  width: 100px;
+  height: 100px;
+  background-color: #ff4b4b;
+  margin: 20px auto;
+  border-radius: 10px;
+  position: relative;
 }
 
-/* Carousel */
-.carousel img {
-  border-radius: 15px;
-  height: 400px;
-  object-fit: cover;
+/* Bouncing Ball */
+#ball-container {
+  width: 400px;
+  height: 200px;
+  border: 2px solid #0078ff;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px auto;
+  background: #e6f0ff;
+  overflow: hidden;
+}
+
+#ball {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #ff8800, #ff5500);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
